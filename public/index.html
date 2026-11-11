@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Canvas API Examples</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main class="page">
+    <header class="page-header">
+      <h1>Canvas API Examples</h1>
+      <p class="lede">Run each recipe against your Canvas account, read what comes back, and open the code to see how it works.</p>
+      <p class="note">Recipes use the account set in your <code>.env</code> file. Your token stays on this computer.</p>
+      <nav class="index" aria-labelledby="index-title">
+        <h2 class="index-title" id="index-title">Recipes</h2>
+        <ol class="index-list" id="recipe-index"></ol>
+      </nav>
+    </header>
+    <div id="recipes"></div>
+  </main>
+
+  <dialog id="confirm" aria-labelledby="confirm-title">
+    <form method="dialog">
+      <h2 class="dialog-title" id="confirm-title">Run this recipe?</h2>
+      <p class="dialog-recipe" id="confirm-recipe"></p>
+      <p class="warning">Changes data in your demo course.</p>
+      <p class="dialog-body">This recipe creates and deletes data in the course set as CANVAS_COURSE_ID. Use a demo course only.</p>
+      <div class="dialog-actions">
+        <button type="submit" value="cancel" class="secondary" autofocus>Cancel</button>
+        <button type="submit" value="run" class="run">Run recipe</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>
